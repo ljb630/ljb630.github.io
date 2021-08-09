@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylecss.css">
+    <link rel="stylesheet" href="sass.scss">
+    <script src="js/jquery.js"></script>
+    <title>special</title>
+</head>
+<body>
+        <!-- header section starts -->
+
+        <header id="header">
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="special.html">special</a></li>
+                    <li><a href="dishes.html">dishes</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </nav>
+    
+            <div class="fas fa-hamburger"></div>
+    
+            <a href="index.html" class="logo"><img src="w.png" alt=""></a>
+    
+        </header>
+    
+        <!-- header section ends -->
+    <!-- special card section starts  -->
+
+    <section id="special" class="container-fluid">
+
+        <div class="heading text-center">
+            <h1>our <span>special</span></h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In, atque.</p>
+        </div>
+
+
+        <div class="card-container">
+
+            <div class="card">
+                <img src="mikl.jpg" alt="">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque eum nam, officia porro dicta
+                    molestiae! Veniam, nemo aliquid. Repellat, iste.</p>
+                <a href="shakes.png"><button>Shakes</button></a>
+            </div>
+
+            <div class="card">
+                <img src="bf.jpg" alt="">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque eum nam, officia porro dicta
+                    molestiae! Veniam, nemo aliquid. Repellat, iste.</p>
+                <a href="burgers.png"><button>Burgers</button></a>
+            </div>
+
+            <div class="card">
+                <img src="c.jpg" alt="">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque eum nam, officia porro dicta
+                    molestiae! Veniam, nemo aliquid. Repellat, iste.</p>
+                <a href="chicken.png"><button>Chicken</button></a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- special card section ends  -->
+
+     <!-- footer section starts  -->
+
+     <section id="footer" class="container-fluid">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-4 brand">
+
+                <a href="#" class="logo"><img src="#" alt=""></a>
+
+                <div class="icons">
+                    <a href="#" class="fab fa-facebook-square"></a>
+                    <a href="#" class="fab fa-twitter-square"></a>
+                    <a href="#" class="fab fa-instagram-square"></a>
+                    <a href="#" class="fab fa-pinterest-square"></a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <h1>&copy; copyright @ 2020 by <span>Mr.Shaik.laljanbasha</span></h1>
+
+    </section>
+
+    <!-- footer section ends  -->
+
+    
+    <!-- script part starts  -->
+
+    <script>
+
+        $(document).ready(function () {
+
+            $('.fa-hamburger').click(function () {
+                $(this).toggleClass('fa-times');
+                $('nav').toggleClass('nav-toggle');
+            });
+
+            $('nav ul li a').click(function () {
+                $('.fa-hamburger').removeClass('fa-times');
+                $('nav').removeClass('nav-toggle');
+            });
+
+            $('.dot1').click(function () {
+                $('.vid1').css('display', 'block');
+                $('.vid2').css('display', 'none');
+                $('.vid3').css('display', 'none');
+            });
+
+            $('.dot2').click(function () {
+                $('.vid2').css('display', 'block');
+                $('.vid1').css('display', 'none');
+                $('.vid3').css('display', 'none');
+            });
+
+            $('.dot3').click(function () {
+                $('.vid3').css('display', 'block');
+                $('.vid1').css('display', 'none');
+                $('.vid2').css('display', 'none');
+            });
+
+            $(window).on('scroll load', function () {
+                if ($(window).scrollTop() > 10) {
+                    $('#header').addClass('header-active');
+                } else {
+                    $('#header').removeClass('header-active');
+                }
+            });
+
+        });
+
+    </script>
+</body>
+</html>

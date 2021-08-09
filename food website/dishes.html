@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylecss.css">
+    <link rel="stylesheet" href="sass.scss">
+    <script src="js/jquery.js"></script>
+    <title>Dishes</title>
+</head>
+
+<body>
+    <!-- header section starts -->
+
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="special.html">special</a></li>
+                <li><a href="dishes.html">dishes</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="fas fa-hamburger"></div>
+
+        <a href="index.html" class="logo"><img src="w.png" alt=""></a>
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- dish section starts  -->
+
+    <section id="dish" class="container">
+
+        <div class="heading text-center">
+            <h1>our <span>dishes</span></h1>
+        </div>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="cb.jpeg" alt="">
+                <div class="info">
+                    <h3>Chicken Burger</h3>
+                    <p>I always say, 'Eat clean to stay fit; have a burger to stay sane.'</p>
+                    <a href="cb.jpeg"><button>view</button></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="f.jpeg" alt="">
+                <div class="info">
+                    <h3>Fries</h3>
+                    <p>You promise yourself you're going to diet, then eat not one or two French fries but a whole plate.</p>
+                    <a href="f.jpeg"><button>view</button></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="wings.jpg" alt="">
+                <div class="info">
+                    <h3>Fried Chicken</h3>
+                    <p>One day I'd love a house in the country, with some chickens, dogs, and kids. ... "Eat fried chicken every day, as the angels go sailing by.</p>
+                    <a href="wings.jpg"><button>view</button></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="cp.jpeg" alt="">
+                <div class="info">
+                    <h3>Chicken Popcorn</h3>
+                    <p>One day I thought why not the popcorn chicken! ... Make an assembly line of marinated chicken, beaten egg and the bread crumb mix.</p>
+                    <a href="cp.jpeg"><button>view</button></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="cn.jpeg" alt="">
+                <div class="info">
+                    <h3>Chicken Nuggets</h3>
+                    <p>And yet, despite downing that many nuggets, he still managed to win not one, but three Olympic gold medals. I can't even win a single bronze one.</p>
+                    <a href="cn.jpeg"><button>view</button></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="cw.jpeg" alt="">
+                <div class="info">
+                    <h3> Chicken wings</h3>
+                    <p>“Do not refuse a wing to the persons who gave you the whole chicken.”</p>
+                    <a href="cw.jpeg"><button>view</button></a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- dish section ends  -->
+
+    <!-- footer section starts  -->
+
+    <section id="footer" class="container-fluid">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-4 brand">
+
+                <a href="#" class="logo"><img src="#" alt=""></a>
+
+                <div class="icons">
+                    <a href="#" class="fab fa-facebook-square"></a>
+                    <a href="#" class="fab fa-twitter-square"></a>
+                    <a href="#" class="fab fa-instagram-square"></a>
+                    <a href="#" class="fab fa-pinterest-square"></a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <h1>&copy; copyright @ 2020 by <span>Mr.Shaik.laljanbasha</span></h1>
+
+    </section>
+
+    <!-- footer section ends  -->
+
+
+    <!-- script part starts  -->
+
+    <script>
+
+        $(document).ready(function () {
+
+            $('.fa-hamburger').click(function () {
+                $(this).toggleClass('fa-times');
+                $('nav').toggleClass('nav-toggle');
+            });
+
+            $('nav ul li a').click(function () {
+                $('.fa-hamburger').removeClass('fa-times');
+                $('nav').removeClass('nav-toggle');
+            });
+
+            $('.dot1').click(function () {
+                $('.vid1').css('display', 'block');
+                $('.vid2').css('display', 'none');
+                $('.vid3').css('display', 'none');
+            });
+
+            $('.dot2').click(function () {
+                $('.vid2').css('display', 'block');
+                $('.vid1').css('display', 'none');
+                $('.vid3').css('display', 'none');
+            });
+
+            $('.dot3').click(function () {
+                $('.vid3').css('display', 'block');
+                $('.vid1').css('display', 'none');
+                $('.vid2').css('display', 'none');
+            });
+
+            $(window).on('scroll load', function () {
+                if ($(window).scrollTop() > 10) {
+                    $('#header').addClass('header-active');
+                } else {
+                    $('#header').removeClass('header-active');
+                }
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>

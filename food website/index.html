@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Responsive Food/Resturant Website Design Tutorial</title>
+    <link rel="stylesheet" href="fonts/font-awesome.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fonts/google-fonts.css">
+    <link rel="stylesheet" href="stylecss.css">
+    <link rel="stylesheet" href="sass.scss">
+    <script src="js/jquery.js"></script>
+
+    <title>index</title>
+</head>
+
+<body>
+
+    <!-- header section starts -->
+
+    <header id="header">
+
+        <nav>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="special.html">special</a></li>
+                <li><a href="dishes.html">dishes</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+        <!-- <nav>
+            <ul>
+                <li><a href="#milk">M/T shakes</a></li>
+                <li><a href="#wings">Chicken wings</a></li>
+                <li><a href="#fries">Fries</a></li>
+                <li><a href="#burger">Burgers</a></li>
+                <li><a href="#bever">Drinks</a></li>
+            </ul>
+        </nav> -->
+
+        <div class="fas fa-hamburger"></div>
+
+        <a href="index.html" class="logo"><img src="w.png" alt=""></a>
+
+    </header>
+
+    <!-- header section ends -->
+
+
+
+    <!-- home section starts  -->
+
+
+
+    <!-- sliders start -->
+
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div id="milk" class="carousel-item active">
+                <img width="100%" src="2.png" class="d-block w-100" alt="...">
+            </div>
+            <div id="wings" class="carousel-item">
+                <img width="100%" src="3.png" class="d-block w-100" alt="...">
+            </div>
+            <div id="fries" class="carousel-item">
+                <img width="100%" src="4.png" class="d-block w-100" alt="...">
+            </div>
+            <div id="burger" class="carousel-item">
+                <img width="100%" src="SCARECROW BANNER.png" class="d-block w-100" alt="...">
+            </div>
+            <div id="bever" class="carousel-item">
+                <img width="100%" src="5.png" class="d-block w-100" alt="...">
+            </div>
+
+        </div>
+
+
+    </div>
+    <!-- sliders end -->
+
+
+    <!-- home section ends  -->
+
+    <!-- footer section starts  -->
+
+    <section id="footer" class="container-fluid">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-4 brand">
+
+                <a href="#" class="logo"><img src="#" alt=""></a>
+
+                <div class="icons">
+                    <a href="#" class="fab fa-facebook-square"></a>
+                    <a href="#" class="fab fa-twitter-square"></a>
+                    <a href="#" class="fab fa-instagram-square"></a>
+                    <a href="#" class="fab fa-pinterest-square"></a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <h1>&copy; copyright @ 2020 by <span>Mr.Shaik.laljanbasha</span></h1>
+
+    </section>
+
+    <!-- footer section ends  -->
+
+
+
+    <!-- script part starts  -->
+
+    <script>
+
+        $(document).ready(function () {
+
+            $('.fa-hamburger').click(function () {
+                $(this).toggleClass('fa-times');
+                $('nav').toggleClass('nav-toggle');
+            });
+
+            $('nav ul li a').click(function () {
+                $('.fa-hamburger').removeClass('fa-times');
+                $('nav').removeClass('nav-toggle');
+            });
+
+            $('.dot1').click(function () {
+                $('.vid1').css('display', 'block');
+                $('.vid2').css('display', 'none');
+                $('.vid3').css('display', 'none');
+            });
+
+            $('.dot2').click(function () {
+                $('.vid2').css('display', 'block');
+                $('.vid1').css('display', 'none');
+                $('.vid3').css('display', 'none');
+            });
+
+            $('.dot3').click(function () {
+                $('.vid3').css('display', 'block');
+                $('.vid1').css('display', 'none');
+                $('.vid2').css('display', 'none');
+            });
+
+            $(window).on('scroll load', function () {
+                if ($(window).scrollTop() > 10) {
+                    $('#header').addClass('header-active');
+                } else {
+                    $('#header').removeClass('header-active');
+                }
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
